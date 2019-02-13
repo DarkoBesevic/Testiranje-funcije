@@ -3,11 +3,13 @@ ocekujemo da ce funkcija kojoj prosedimo niz brojeva vratiti samo parne brojeve 
 */
 
 describe("Testiranje filter funkcije", function () {
-    const niz = [56, 26, 0, 77, 39, 346, 85, 55, 234, 5651, 5687, 588];
-    it("treba da vrati samo parne brojeve", function (niz) {
-        for (let i = 0; i < niz.length; i++) {
-            if (niz[i] % 2 == 1) {
-                let parni = false;
+    it("treba da vrati samo parne brojeve", function () {
+        const niz = [56, 26, 0, 77, 39, 346, 85, 55, 234, 5651, 5687, 588];
+        const niz1 = vratiParne(niz);
+        let parni = true;
+        for (let i = 0; i < niz1.length; i++) {
+            if (niz1[i] % 2 == 1) {
+                parni = false;
                 break;
             }
         }
